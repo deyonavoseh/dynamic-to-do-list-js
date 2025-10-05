@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Check if input is empty
         if (taskText === '') {
             alert('Please enter a task.');
-            return; // Stop function if no input
+            return;
         }
 
         // Create new list item (li)
@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Create remove button
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
-        removeButton.className = 'remove-btn';
+        // ✅ Use classList.add exactly as required
+        removeButton.classList.add('remove-btn');
 
         // Add remove functionality
         removeButton.onclick = function () {
